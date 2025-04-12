@@ -11,18 +11,15 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
             background-color: #121212; /* خلفية داكنة */
             color: #e0e0e0; /* نصوص فاتحة */
             line-height: 1.6;
         }
-
         .container {
             display: flex;
             min-height: 100vh;
         }
-
         /* قائمة الأقسام الجانبية */
         .sidebar {
             width: 250px; /* عرض القائمة الجانبية */
@@ -35,7 +32,6 @@
             overflow-y: auto;
             border-right: 1px solid #333; /* حدود خفيفة */
         }
-
         .sidebar h2 {
             color: #8B0000; /* عنوان أحمر داكن */
             margin-bottom: 20px;
@@ -44,16 +40,13 @@
             padding-bottom: 10px;
             border-bottom: 1px solid #333; /* خط أسفل العنوان */
         }
-
         .sidebar ul {
             list-style: none;
         }
-
         .sidebar li {
             margin-bottom: 10px;
             text-align: left;
         }
-
         .sidebar a {
             color: #e0e0e0; /* نصوص القائمة فاتحة */
             text-decoration: none;
@@ -65,17 +58,14 @@
             cursor: pointer;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* ظل خفيف */
         }
-
         .sidebar a:hover {
             background-color: transparent; /* حذف التحديد عند التحويم */
             color: #8B0000; /* تغيير لون النص فقط عند التحويم */
         }
-
         .sidebar a.active {
             color: #8B0000; /* لون النص أحمر داكن عند التحديد */
             background-color: transparent; /* حذف التحديد عند التفعيل */
         }
-
         /* المحتوى الرئيسي */
         .main-content {
             flex: 1;
@@ -86,27 +76,22 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* ظل واضح */
         }
-
         /* قسم تعديل مودلز الشخصيات */
         .content-section {
             display: none; /* مخفي افتراضيًا */
             margin-top: 20px;
         }
-
         .content-section.active {
             display: block; /* يظهر عند التفعيل */
         }
-
         .content-section h1 {
             font-size: 28px; /* زيادة حجم العنوان */
             color: #8B0000; /* عنوان أحمر داكن */
             margin-bottom: 20px;
         }
-
         .doc-viewer-container {
             position: relative;
         }
-
         .doc-viewer {
             width: 100%;
             height: 700px; /* زيادة ارتفاع المشغل */
@@ -116,7 +101,6 @@
             background-color: #1e1e1e; /* خلفية المشغل داكنة */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* ظل واضح */
         }
-
         .fullscreen-btn {
             position: absolute;
             top: 10px;
@@ -130,13 +114,11 @@
             font-size: 14px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* ظل خفيف */
         }
-
         /* تنسيق للشاشات الصغيرة */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
             }
-
             .sidebar {
                 width: 100%;
                 height: auto;
@@ -144,7 +126,6 @@
                 border-right: none;
                 border-bottom: 1px solid #333;
             }
-
             .main-content {
                 margin-left: 0;
                 padding: 20px; /* تقليل التباعد في الشاشات الصغيرة */
@@ -169,9 +150,9 @@
                 <li><a href="#" id="toggle-trader-prices">تعديل أسعار التاجر</a></li>
                 <li><a href="#" id="toggle-weapon-stats">تعديل قوة الأسلحة والمخزون</a></li>
                 <li><a href="#" id="toggle-path-editing">تعديل المسار</a></li>
+                <li><a href="#" id="toggle-custom-maps">إضافة كوستم مابات في برنامج RE4 Quad (الإصدار القديم)</a></li>
             </ul>
         </div>
-
         <!-- المحتوى الرئيسي -->
         <div class="main-content">
             <!-- قسم تعديل مودلز الشخصيات -->
@@ -182,7 +163,6 @@
                     <iframe id="mod-doc" src="https://docs.google.com/document/d/1yRVz3yx43CSExsFc3bs1Sp7rPnTq7OJTiBUUQP2oq8I/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل مابات اللعبة من الصفر -->
             <div class="content-section" id="map-tools-content">
                 <h1>دليل تعديل مابات اللعبة من الصفر</h1>
@@ -191,7 +171,6 @@
                     <iframe id="map-doc" src="https://docs.google.com/document/d/1Hs6ZrgZny7IaziAKiCclRosl1FjTb0Aq_RJmmihUCsY/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل حواجز الماب -->
             <div class="content-section" id="barrier-tools-content">
                 <h1>دليل تعديل حواجز الماب</h1>
@@ -200,7 +179,6 @@
                     <iframe id="barrier-doc" src="https://docs.google.com/document/d/1MrvA2IfN5d7aoWapukc_tjEkvlvwJHrHqRLPeZis-O0/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل أصوات اللعبة -->
             <div class="content-section" id="sound-tools-content">
                 <h1>دليل تعديل أصوات اللعبة</h1>
@@ -209,7 +187,6 @@
                     <iframe id="sound-doc" src="https://docs.google.com/document/d/1XRaYE-S3g9TAQCKWl3uHpCRcbOVwT7GIYrSi47X4jbk/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل الجو والإضاءة -->
             <div class="content-section" id="env-tools-content">
                 <h1>دليل تعديل الجو والإضاءة</h1>
@@ -218,7 +195,6 @@
                     <iframe id="env-doc" src="https://docs.google.com/document/d/1_IhpvUgcflooPQH0iwI5zcPEw-yp-pZFQDPFfLGfIzc/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل تطويرات الأسلحة -->
             <div class="content-section" id="weapon-upgrades-content">
                 <h1>دليل تعديل تطويرات الأسلحة</h1>
@@ -227,7 +203,6 @@
                     <iframe id="weapon-upgrades-doc" src="https://docs.google.com/document/d/1wT1bWJ_qHNg2WAY5aFPN7WljG-XKFKSP7HO2OhHIVsg/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل دمج الذخيرة -->
             <div class="content-section" id="ammo-combine-content">
                 <h1>دليل تعديل دمج الذخيرة</h1>
@@ -236,7 +211,6 @@
                     <iframe id="ammo-combine-doc" src="https://docs.google.com/document/d/1jvZULgKGwWpbGJU9CsIcJ_vXCEmFIwuvguJjXTuFYac/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل لون الهلث بار -->
             <div class="content-section" id="health-bar-content">
                 <h1>دليل تعديل لون الهلث بار</h1>
@@ -245,7 +219,6 @@
                     <iframe id="health-bar-doc" src="https://docs.google.com/document/d/1htOLqhPajIVO3WMNJhhQdgHIBpYXDzTQMsBFB7_FPMs/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل أسعار التاجر -->
             <div class="content-section" id="trader-prices-content">
                 <h1>دليل تعديل أسعار التاجر</h1>
@@ -254,7 +227,6 @@
                     <iframe id="trader-prices-doc" src="https://docs.google.com/document/d/1xjHKovH0FGVEAf-adZlVgEoK3eo9YNpBdV2S7ZQHSYg/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل قوة الأسلحة والمخزون -->
             <div class="content-section" id="weapon-stats-content">
                 <h1>دليل تعديل قوة الأسلحة والمخزون</h1>
@@ -263,7 +235,6 @@
                     <iframe id="weapon-stats-doc" src="https://docs.google.com/document/d/15iKPjwHzvjrpKhAHbagNSVyPTMKWuN1JscOQLc1SH5w/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
-
             <!-- قسم تعديل المسار -->
             <div class="content-section" id="path-editing-content">
                 <h1>دليل تعديل المسار</h1>
@@ -272,9 +243,16 @@
                     <iframe id="path-editing-doc" src="https://docs.google.com/document/d/1DdhMVVTCHDR7cOUb6JkZtbhlt4bMkJqW9zhI_70QTCQ/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
+            <!-- قسم إضافة كوستم مابات -->
+            <div class="content-section" id="custom-maps-content">
+                <h1>دليل إضافة كوستم مابات في برنامج RE4 Quad (الإصدار القديم)</h1>
+                <div class="doc-viewer-container">
+                    <button class="fullscreen-btn" onclick="toggleFullscreen('custom-maps-doc')">عرض بالحجم الكامل</button>
+                    <iframe id="custom-maps-doc" src="https://docs.google.com/document/d/1PZvWF2Ih6VOJufQaWlNHbRA7_qRN3i6lcoEUnoK6AFU/preview" class="doc-viewer"></iframe>
+                </div>
+            </div>
         </div>
     </div>
-
     <script>
         // JavaScript لإظهار وإخفاء الأقسام
         const toggleModTools = document.getElementById('toggle-mod-tools');
@@ -288,7 +266,7 @@
         const toggleTraderPrices = document.getElementById('toggle-trader-prices');
         const toggleWeaponStats = document.getElementById('toggle-weapon-stats');
         const togglePathEditing = document.getElementById('toggle-path-editing');
-
+        const toggleCustomMaps = document.getElementById('toggle-custom-maps');
         const modToolsContent = document.getElementById('mod-tools-content');
         const mapToolsContent = document.getElementById('map-tools-content');
         const barrierToolsContent = document.getElementById('barrier-tools-content');
@@ -300,14 +278,13 @@
         const traderPricesContent = document.getElementById('trader-prices-content');
         const weaponStatsContent = document.getElementById('weapon-stats-content');
         const pathEditingContent = document.getElementById('path-editing-content');
-
+        const customMapsContent = document.getElementById('custom-maps-content');
         // دالة لتحديث حالة الروابط
         function updateActiveLink(activeLink) {
             const links = document.querySelectorAll('.sidebar a');
             links.forEach(link => link.classList.remove('active')); // إزالة التحديد عن جميع الروابط
             activeLink.classList.add('active'); // تحديد الرابط الحالي
         }
-
         // تفعيل وإلغاء عرض قسم "تعديل مودلز الشخصيات"
         toggleModTools.addEventListener('click', function(event) {
             event.preventDefault();
@@ -322,9 +299,9 @@
             traderPricesContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleModTools);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل مابات اللعبة من الصفر"
         toggleMapTools.addEventListener('click', function(event) {
             event.preventDefault();
@@ -339,9 +316,9 @@
             traderPricesContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleMapTools);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل حواجز الماب"
         toggleBarrierTools.addEventListener('click', function(event) {
             event.preventDefault();
@@ -356,9 +333,9 @@
             traderPricesContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleBarrierTools);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل أصوات اللعبة"
         toggleSoundTools.addEventListener('click', function(event) {
             event.preventDefault();
@@ -373,9 +350,9 @@
             traderPricesContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleSoundTools);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل الجو والإضاءة"
         toggleEnvTools.addEventListener('click', function(event) {
             event.preventDefault();
@@ -390,9 +367,9 @@
             traderPricesContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleEnvTools);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل تطويرات الأسلحة"
         toggleWeaponUpgrades.addEventListener('click', function(event) {
             event.preventDefault();
@@ -407,9 +384,9 @@
             traderPricesContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleWeaponUpgrades);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل دمج الذخيرة"
         toggleAmmoCombine.addEventListener('click', function(event) {
             event.preventDefault();
@@ -424,9 +401,9 @@
             traderPricesContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleAmmoCombine);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل لون الهلث بار"
         toggleHealthBar.addEventListener('click', function(event) {
             event.preventDefault();
@@ -441,9 +418,9 @@
             traderPricesContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleHealthBar);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل أسعار التاجر"
         toggleTraderPrices.addEventListener('click', function(event) {
             event.preventDefault();
@@ -458,9 +435,9 @@
             healthBarContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleTraderPrices);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل قوة الأسلحة والمخزون"
         toggleWeaponStats.addEventListener('click', function(event) {
             event.preventDefault();
@@ -475,9 +452,9 @@
             healthBarContent.classList.remove('active');
             traderPricesContent.classList.remove('active');
             pathEditingContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(toggleWeaponStats);
         });
-
         // تفعيل وإلغاء عرض قسم "تعديل المسار"
         togglePathEditing.addEventListener('click', function(event) {
             event.preventDefault();
@@ -492,9 +469,26 @@
             healthBarContent.classList.remove('active');
             traderPricesContent.classList.remove('active');
             weaponStatsContent.classList.remove('active');
+            customMapsContent.classList.remove('active');
             updateActiveLink(togglePathEditing);
         });
-
+        // تفعيل وإلغاء عرض قسم "إضافة كوستم مابات"
+        toggleCustomMaps.addEventListener('click', function(event) {
+            event.preventDefault();
+            customMapsContent.classList.add('active');
+            modToolsContent.classList.remove('active');
+            mapToolsContent.classList.remove('active');
+            barrierToolsContent.classList.remove('active');
+            soundToolsContent.classList.remove('active');
+            envToolsContent.classList.remove('active');
+            weaponUpgradesContent.classList.remove('active');
+            ammoCombineContent.classList.remove('active');
+            healthBarContent.classList.remove('active');
+            traderPricesContent.classList.remove('active');
+            weaponStatsContent.classList.remove('active');
+            pathEditingContent.classList.remove('active');
+            updateActiveLink(toggleCustomMaps);
+        });
         // تفعيل وضع ملء الشاشة للمشغل
         function toggleFullscreen(docId) {
             const iframe = document.getElementById(docId);
