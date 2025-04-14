@@ -307,6 +307,8 @@
                 <div class="main-grid-item" onclick="showContent('weapon-stats-content')">تعديل قوة الأسلحة والمخزون</div>
                 <div class="main-grid-item" onclick="showContent('path-editing-content')">تعديل المسار</div>
                 <div class="main-grid-item" onclick="showContent('custom-maps-content')">إضافة كوستم مابات</div>
+                <div class="main-grid-item" onclick="showContent('lit-editing-content')">تعديل LIT</div>
+                <div class="main-grid-item" onclick="showContent('enemy-editing-content')">تعديل الأعداء (ESL)</div>
             </div>
         </div>
         <div class="main-content" id="main-content">
@@ -361,6 +363,14 @@
                     <div class="section-card" onclick="showContent('custom-maps-content')">
                         <h2>إضافة كوستم مابات</h2>
                         <p>كيفية إضافة خرائط مخصصة لبرنامج التعديل القديم</p>
+                    </div>
+                    <div class="section-card" onclick="showContent('lit-editing-content')">
+                        <h2>تعديل LIT</h2>
+                        <p>دليل تعديل ملفات الإضاءة في اللعبة</p>
+                    </div>
+                    <div class="section-card" onclick="showContent('enemy-editing-content')">
+                        <h2>تعديل الأعداء (ESL)</h2>
+                        <p>دليل تعديل ملفات الأعداء في اللعبة</p>
                     </div>
                 </div>
             </div>
@@ -459,6 +469,23 @@
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('custom-doc')">عرض بالحجم الكامل</button>
                     <iframe id="custom-doc" src="https://docs.google.com/document/d/1PZvWF2Ih6VOJufQaWlNHbRA7_qRN3i6lcoEUnoK6AFU/preview" class="doc-viewer"></iframe>
+                </div>
+            </div>
+            <div class="content-section" id="lit-editing-content">
+                <button class="go-back-btn" onclick="showContent('all-sections-content')">العودة للصفحة الرئيسية</button>
+                <h1>تعديل LIT</h1>
+                <div class="doc-viewer-container">
+                    <button class="fullscreen-btn" onclick="toggleFullscreen('lit-doc')">عرض بالحجم الكامل</button>
+                    <iframe id="lit-doc" src="https://docs.google.com/document/d/1nDVfad_sxvQmoFGXrJxDVpCWsX9UeKRDDrPCQaNQ6Ms/preview" class="doc-viewer"></iframe>
+                </div>
+            </div>
+            <!-- القسم الجديد -->
+            <div class="content-section" id="enemy-editing-content">
+                <button class="go-back-btn" onclick="showContent('all-sections-content')">العودة للصفحة الرئيسية</button>
+                <h1>تعديل الأعداء (ESL)</h1>
+                <div class="doc-viewer-container">
+                    <button class="fullscreen-btn" onclick="toggleFullscreen('enemy-doc')">عرض بالحجم الكامل</button>
+                    <iframe id="enemy-doc" src="https://docs.google.com/document/d/1nMsCeMfYF-PY2GkzhpI1Vjry1n3PrqQ22J7Bz3chOMw/preview" class="doc-viewer"></iframe>
                 </div>
             </div>
         </div>
