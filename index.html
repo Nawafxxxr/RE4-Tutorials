@@ -59,7 +59,7 @@
             border-right: 1px solid #333;
         }
         .main-grid.visible {
-            left: 0; /* تحريك القائمة إلى داخل الشاشة عند إضافة الفئة visible */
+            left: 0;
         }
         .main-grid-content {
             display: flex;
@@ -171,7 +171,7 @@
         }
         .toggle-sidebar {
             position: fixed;
-            left: 20px; /* نقل الزر إلى اليسار */
+            left: 20px;
             top: 20px;
             background-color: #8B0000;
             color: white;
@@ -225,7 +225,6 @@
         .go-back-btn:hover {
             background-color: #444;
         }
-        /* تحسينات للأجهزة المحمولة */
         @media (max-width: 768px) {
             .container {
                 width: 100%;
@@ -254,7 +253,6 @@
                 padding: 6px 10px;
             }
         }
-        /* تحسينات للشاشات الصغيرة جداً */
         @media (max-width: 480px) {
             .main-grid {
                 width: 85vw;
@@ -277,7 +275,6 @@
                 padding: 10px;
             }
         }
-        /* تحسينات للشاشات الكبيرة */
         @media (min-width: 1200px) {
             .all-sections {
                 grid-template-columns: repeat(3, 1fr);
@@ -309,10 +306,11 @@
                 <div class="main-grid-item" onclick="showContent('custom-maps-content')">إضافة كوستم مابات</div>
                 <div class="main-grid-item" onclick="showContent('lit-editing-content')">تعديل LIT</div>
                 <div class="main-grid-item" onclick="showContent('enemy-editing-content')">تعديل الأعداء (ESL)</div>
+                <div class="main-grid-item" onclick="showContent('leon-response-content')">تعديل رسبون ليون</div>
             </div>
         </div>
         <div class="main-content" id="main-content">
-            <!-- قسم جميع الأقسام -->
+            <!-- صفحة كل الأقسام -->
             <div class="content-section active" id="all-sections-content">
                 <h1>جميع أقسام الدروس</h1>
                 <div class="all-sections">
@@ -372,15 +370,21 @@
                         <h2>تعديل الأعداء (ESL)</h2>
                         <p>دليل تعديل ملفات الأعداء في اللعبة</p>
                     </div>
+                    <div class="section-card" onclick="showContent('leon-response-content')">
+                        <h2>تعديل رسبون ليون</h2>
+                        <p>دليل تعديل رسبون ليون في اللعبة</p>
+                    </div>
                 </div>
             </div>
+
             <!-- باقي الأقسام -->
+
             <div class="content-section" id="mod-tools-content">
                 <button class="go-back-btn" onclick="showContent('all-sections-content')">العودة للصفحة الرئيسية</button>
                 <h1>دليل تعديل مودلز الشخصيات</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('mod-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="mod-doc" src="https://docs.google.com/document/d/1yRVz3yx43CSExsFc3bs1Sp7rPnTq7OJTiBUUQP2oq8I/preview" class="doc-viewer"></iframe>
+                    <iframe id="mod-doc" src="https://docs.google.com/document/d/1yRVz3yx43CSExsFc3bs1Sp7rPnTq7OJTiBUUQP2oq8I/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="map-tools-content">
@@ -388,7 +392,7 @@
                 <h1>تعديل مابات اللعبة من الصفر</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('map-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="map-doc" src="https://docs.google.com/document/d/1Hs6ZrgZny7IaziAKiCclRosl1FjTb0Aq_RJmmihUCsY/preview" class="doc-viewer"></iframe>
+                    <iframe id="map-doc" src="https://docs.google.com/document/d/1Hs6ZrgZny7IaziAKiCclRosl1FjTb0Aq_RJmmihUCsY/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="barrier-tools-content">
@@ -396,7 +400,7 @@
                 <h1>تعديل حواجز الماب</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('barrier-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="barrier-doc" src="https://docs.google.com/document/d/1MrvA2IfN5d7aoWapukc_tjEkvlvwJHrHqRLPeZis-O0/preview" class="doc-viewer"></iframe>
+                    <iframe id="barrier-doc" src="https://docs.google.com/document/d/1MrvA2IfN5d7aoWapukc_tjEkvlvwJHrHqRLPeZis-O0/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="sound-tools-content">
@@ -404,7 +408,7 @@
                 <h1>تعديل أصوات اللعبة</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('sound-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="sound-doc" src="https://docs.google.com/document/d/1XRaYE-S3g9TAQCKWl3uHpCRcbOVwT7GIYrSi47X4jbk/preview" class="doc-viewer"></iframe>
+                    <iframe id="sound-doc" src="https://docs.google.com/document/d/1XRaYE-S3g9TAQCKWl3uHpCRcbOVwT7GIYrSi47X4jbk/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="env-tools-content">
@@ -412,7 +416,7 @@
                 <h1>تعديل الجو والإضاءة</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('env-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="env-doc" src="https://docs.google.com/document/d/1_IhpvUgcflooPQH0iwI5zcPEw-yp-pZFQDPFfLGfIzc/preview" class="doc-viewer"></iframe>
+                    <iframe id="env-doc" src="https://docs.google.com/document/d/1_IhpvUgcflooPQH0iwI5zcPEw-yp-pZFQDPFfLGfIzc/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="weapon-upgrades-content">
@@ -420,7 +424,7 @@
                 <h1>تعديل تطويرات الأسلحة</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('weapon-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="weapon-doc" src="https://docs.google.com/document/d/1wT1bWJ_qHNg2WAY5aFPN7WljG-XKFKSP7HO2OhHIVsg/preview" class="doc-viewer"></iframe>
+                    <iframe id="weapon-doc" src="https://docs.google.com/document/d/1wT1bWJ_qHNg2WAY5aFPN7WljG-XKFKSP7HO2OhHIVsg/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="ammo-combine-content">
@@ -428,7 +432,7 @@
                 <h1>تعديل دمج الذخيرة</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('ammo-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="ammo-doc" src="https://docs.google.com/document/d/1jvZULgKGwWpbGJU9CsIcJ_vXCEmFIwuvguJjXTuFYac/preview" class="doc-viewer"></iframe>
+                    <iframe id="ammo-doc" src="https://docs.google.com/document/d/1jvZULgKGwWpbGJU9CsIcJ_vXCEmFIwuvguJjXTuFYac/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="health-bar-content">
@@ -436,7 +440,7 @@
                 <h1>تعديل لون الهلث بار</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('health-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="health-doc" src="https://docs.google.com/document/d/1htOLqhPajIVO3WMNJhhQdgHIBpYXDzTQMsBFB7_FPMs/preview" class="doc-viewer"></iframe>
+                    <iframe id="health-doc" src="https://docs.google.com/document/d/1htOLqhPajIVO3WMNJhhQdgHIBpYXDzTQMsBFB7_FPMs/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="trader-prices-content">
@@ -444,7 +448,7 @@
                 <h1>تعديل أسعار التاجر</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('trader-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="trader-doc" src="https://docs.google.com/document/d/1xjHKovH0FGVEAf-adZlVgEoK3eo9YNpBdV2S7ZQHSYg/preview" class="doc-viewer"></iframe>
+                    <iframe id="trader-doc" src="https://docs.google.com/document/d/1xjHKovH0FGVEAf-adZlVgEoK3eo9YNpBdV2S7ZQHSYg/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="weapon-stats-content">
@@ -452,7 +456,7 @@
                 <h1>تعديل قوة الأسلحة والمخزون</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('stats-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="stats-doc" src="https://docs.google.com/document/d/15iKPjwHzvjrpKhAHbagNSVyPTMKWuN1JscOQLc1SH5w/preview" class="doc-viewer"></iframe>
+                    <iframe id="stats-doc" src="https://docs.google.com/document/d/15iKPjwHzvjrpKhAHbagNSVyPTMKWuN1JscOQLc1SH5w/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="path-editing-content">
@@ -460,7 +464,7 @@
                 <h1>تعديل المسار</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('path-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="path-doc" src="https://docs.google.com/document/d/1DdhMVVTCHDR7cOUb6JkZtbhlt4bMkJqW9zhI_70QTCQ/preview" class="doc-viewer"></iframe>
+                    <iframe id="path-doc" src="https://docs.google.com/document/d/1DdhMVVTCHDR7cOUb6JkZtbhlt4bMkJqW9zhI_70QTCQ/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="custom-maps-content">
@@ -468,7 +472,7 @@
                 <h1>إضافة كوستم مابات</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('custom-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="custom-doc" src="https://docs.google.com/document/d/1PZvWF2Ih6VOJufQaWlNHbRA7_qRN3i6lcoEUnoK6AFU/preview" class="doc-viewer"></iframe>
+                    <iframe id="custom-doc" src="https://docs.google.com/document/d/1PZvWF2Ih6VOJufQaWlNHbRA7_qRN3i6lcoEUnoK6AFU/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
             <div class="content-section" id="lit-editing-content">
@@ -476,16 +480,23 @@
                 <h1>تعديل LIT</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('lit-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="lit-doc" src="https://docs.google.com/document/d/1nDVfad_sxvQmoFGXrJxDVpCWsX9UeKRDDrPCQaNQ6Ms/preview" class="doc-viewer"></iframe>
+                    <iframe id="lit-doc" src="https://docs.google.com/document/d/1nDVfad_sxvQmoFGXrJxDVpCWsX9UeKRDDrPCQaNQ6Ms/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
-            <!-- القسم الجديد -->
             <div class="content-section" id="enemy-editing-content">
                 <button class="go-back-btn" onclick="showContent('all-sections-content')">العودة للصفحة الرئيسية</button>
                 <h1>تعديل الأعداء (ESL)</h1>
                 <div class="doc-viewer-container">
                     <button class="fullscreen-btn" onclick="toggleFullscreen('enemy-doc')">عرض بالحجم الكامل</button>
-                    <iframe id="enemy-doc" src="https://docs.google.com/document/d/1nMsCeMfYF-PY2GkzhpI1Vjry1n3PrqQ22J7Bz3chOMw/preview" class="doc-viewer"></iframe>
+                    <iframe id="enemy-doc" src="https://docs.google.com/document/d/1nMsCeMfYF-PY2GkzhpI1Vjry1n3PrqQ22J7Bz3chOMw/preview " class="doc-viewer"></iframe>
+                </div>
+            </div>
+            <div class="content-section" id="leon-response-content">
+                <button class="go-back-btn" onclick="showContent('all-sections-content')">العودة للصفحة الرئيسية</button>
+                <h1>تعديل رسبون ليون</h1>
+                <div class="doc-viewer-container">
+                    <button class="fullscreen-btn" onclick="toggleFullscreen('leon-doc')">عرض بالحجم الكامل</button>
+                    <iframe id="leon-doc" src="https://docs.google.com/document/d/1qP0HtJK8zMLp0bwyfGan-4gP2Mh2QGMEGdVkMP0x8HY/preview " class="doc-viewer"></iframe>
                 </div>
             </div>
         </div>
@@ -494,34 +505,30 @@
         <p>جميع الحقوق محفوظة | تصميم وتطوير: <strong>Nawaf0x0</strong></p>
     </div>
     <script>
-        // إصلاح مشكلة عدم عرض الأقسام
         function showContent(contentId) {
-            // إخفاء جميع الأقسام أولاً
             document.querySelectorAll('.content-section').forEach(section => {
                 section.classList.remove('active');
             });
-            // عرض القسم المطلوب
             const sectionToShow = document.getElementById(contentId);
             if (sectionToShow) {
                 sectionToShow.classList.add('active');
             }
-            // إغلاق القائمة الجانبية بعد الاختيار على الأجهزة المحمولة
             if (window.innerWidth <= 768) {
                 toggleSidebar();
             }
-            // التمرير إلى أعلى الصفحة
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
         function toggleFullscreen(docId) {
             const iframe = document.getElementById(docId);
             if (!document.fullscreenElement) {
                 if (iframe.requestFullscreen) {
                     iframe.requestFullscreen();
-                } else if (iframe.mozRequestFullScreen) { // Firefox
+                } else if (iframe.mozRequestFullScreen) {
                     iframe.mozRequestFullScreen();
-                } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari & Opera
+                } else if (iframe.webkitRequestFullscreen) {
                     iframe.webkitRequestFullscreen();
-                } else if (iframe.msRequestFullscreen) { // IE/Edge
+                } else if (iframe.msRequestFullscreen) {
                     iframe.msRequestFullscreen();
                 }
             } else {
@@ -536,29 +543,28 @@
                 }
             }
         }
+
         function toggleSidebar() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('overlay');
             const toggleButton = document.getElementById('toggleButton');
             sidebar.classList.toggle('visible');
             overlay.classList.toggle('visible');
-            // تغيير نص زر القائمة
             if (sidebar.classList.contains('visible')) {
                 toggleButton.innerHTML = '✕ إغلاق';
             } else {
                 toggleButton.innerHTML = '☰ القائمة';
             }
         }
-        // التأكد من أن القائمة مغلقة عند تحميل الصفحة
+
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('sidebar').classList.remove('visible');
             document.getElementById('overlay').classList.remove('visible');
             showContent('all-sections-content');
-            // التعامل مع تغيير حجم النافذة
+
             window.addEventListener('resize', function() {
                 const sidebar = document.getElementById('sidebar');
                 const overlay = document.getElementById('overlay');
-                // إغلاق القائمة عند تغيير حجم النافذة
                 if (window.innerWidth > 768 && sidebar.classList.contains('visible')) {
                     sidebar.classList.remove('visible');
                     overlay.classList.remove('visible');
